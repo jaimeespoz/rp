@@ -1,31 +1,36 @@
 .home .layer {
-    background-image: linear-gradient(to right, rgb(0, 0, 0, 0.9), rgb(0, 0, 0, 0.0));
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-    padding: 12px 24px;
+  background-image: linear-gradient(
+    to right,
+    rgb(0, 0, 0, 0.9),
+    rgb(0, 0, 0, 0)
+  );
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 24px;
 }
 
 .home .logo {
-    width: 60px;
-    height: auto;
-    padding: 0px 6px;
-    border-radius: 25px;
+  width: 60px;
+  height: auto;
+  padding: 0px 6px;
+  border-radius: 25px;
 }
 
 .home .titulo {
-    font-family: Germanica;
-    font-size: 6.20rem;
-    color: rgba(179, 14, 22, 1)
+  font-family: Germanica;
+  font-size: 6.2rem;
+  color: rgba(179, 14, 22, 1);
+  line-height: 110%;
 }
 
 .temas ul {
-    padding-left: 16px;
+  padding-left: 16px;
 }
 
 .logo2 {
-    width: 100%;
-    height: auto;
-    margin: 24px 6px;
-    border-radius: 8px;
+  width: 100%;
+  height: auto;
+  margin: 24px 6px;
+  border-radius: 8px;
 }

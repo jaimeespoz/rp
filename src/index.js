@@ -1,23 +1,21 @@
 // modulos
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import { BrowserRouter } from 'react-router-dom';
-import 'bootstrap/dist/css/bootstrap.min.css';
-// import 'semantic-ui-css/semantic.min.css';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
+// import "semantic-ui-css/semantic.min.css";
 
 // paginas
-import { Rutas } from './components/routes';
+import { Rutas } from "./components/routes";
 
 // css
-import '../src/components/styles/Styles.css';
-import Registrarse from './views/Home/Registrarse';
+import "../src/components/styles/Styles.css";
+import Explicame from "./views/explicame/Explicame";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-	<React.StrictMode>
-		<BrowserRouter>
-			{/* <Rutas /> */}
-			<Registrarse />
-		</BrowserRouter>
-	</React.StrictMode>
+  <BrowserRouter>
+    {/* <Rutas /> */}
+    <Explicame />
+  </BrowserRouter>
 );
