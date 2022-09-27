@@ -3,7 +3,7 @@
 function NavBarDetalle({ item }) {
   return (
     <div className="navbardetalle">
-      {item.titulo && !item.link && (
+      {item.titulo == "1" && !item.link && (
         <p
           className="titulo-sin-link"
           style={{
@@ -15,9 +15,34 @@ function NavBarDetalle({ item }) {
           {item.descripcion}
         </p>
       )}
-      {item.titulo && item.link && (
+      {item.titulo == "1" && item.link && (
         <p
           className="titulo"
+          style={{
+            paddingTop: `${item.presalto}`,
+            paddingBottom: `${item.postsalto}`,
+            paddingLeft: `${item.offset}`,
+          }}
+        >
+          {item.descripcion}
+        </p>
+      )}
+
+      {item.titulo == "2" && !item.link && (
+        <p
+          className="subtitulo-sin-link"
+          style={{
+            paddingTop: `${item.presalto}`,
+            paddingBottom: `${item.postsalto}`,
+            paddingLeft: `${item.offset}`,
+          }}
+        >
+          {item.descripcion}
+        </p>
+      )}
+      {item.titulo == "2" && item.link && (
+        <p
+          className="subtitulo"
           style={{
             paddingTop: `${item.presalto}`,
             paddingBottom: `${item.postsalto}`,

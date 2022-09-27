@@ -87,7 +87,10 @@ $textColor: #eee;
 
                 span {
                     display: block;
-                    font-size: 1rem;
+                    font: {
+                        size: 1.2rem;
+                    }
+                    // font-size: 1.2rem;
                     color: $texto;
                     padding: 8px 0px;
                     line-height: 100%;
@@ -183,7 +186,7 @@ $textColor: #eee;
             .titulo-sin-link {
                 font: {
                     size: 1.2rem;
-                    weight: 300;
+                    weight: 400;
                 }
                 padding: 16px 0px 2px 0px;
                 color: $texto;
@@ -193,7 +196,32 @@ $textColor: #eee;
             .titulo {
                 font: {
                     size: 1.2rem;
-                    weight: 300;
+                    weight: 400;
+                }
+                padding: 2px 0px;
+                color: $texto;
+                line-height: 100%;
+
+                &:hover {
+                    color: $texto-muted;
+                    cursor: pointer;
+                }
+            }
+
+            .subtitulo-sin-link {
+                font: {
+                    size: 1.05rem;
+                    weight: 400;
+                }
+                padding: 16px 0px 2px 0px;
+                color: $texto;
+                line-height: 100%;
+            }
+
+            .subtitulo {
+                font: {
+                    size: 1.05rem;
+                    weight: 400;
                 }
                 padding: 2px 0px;
                 color: $texto;
@@ -207,7 +235,7 @@ $textColor: #eee;
 
             .detalle {
                 font: {
-                    size: 0.7rem;
+                    size: 0.8rem;
                     weight: 100;
                 }
                 text-align: justify;
@@ -217,13 +245,16 @@ $textColor: #eee;
             }
 
             .link-sin-link {
-                font-size: 1rem;
+                font: {
+                    size: 0.95rem;
+                    weight: 300;
+                }
                 padding: 4px 0px;
             }
 
             .link {
                 font: {
-                    size: 0.9rem;
+                    size: 0.95rem;
                     weight: 300;
                 }
                 // padding: 2px 0px;
