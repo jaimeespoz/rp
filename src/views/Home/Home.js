@@ -1,5 +1,6 @@
 // modulos
 import { useNavigate } from "react-router-dom";
+import { FaTwitter, FaYoutube, FaInstagram, FaBlogger } from "react-icons/fa";
 
 // paginas
 // import Footer from './Footer';
@@ -8,12 +9,10 @@ import { useNavigate } from "react-router-dom";
 import LogoChile from "../../components/assets/images/LogoChile.png";
 import Libertad from "../../components/assets/images/Libertad.jpg";
 import BanderaEscudo from "../../components/assets/images/banderaescudo.jpg";
-import BotonVolver from "../../components/html/button/BotonVolver";
-import BotonGuardar from "../../components/html/button/BotonGuardar";
 import Temas from "./Temas";
 
 // css
-import "./style.css";
+import "./Home.scss";
 
 function Home() {
   let navigate = useNavigate();
@@ -30,66 +29,98 @@ function Home() {
     navigate("/explicame");
   };
 
+  const handlePruebaFlex = () => {
+    navigate("/pruebaflex");
+  };
+
   return (
     <>
       <main>
-        <div className="container-fluid">
-          <div className="row">
-            <div className="col-12 home">
-              <div className="row">
-                <div className="col-6 d-flex justify-content-start layer">
-                  <div className="d-flex flex-column align-items-center">
-                    <div className="row">
-                      <div className="col-12">
-                        <h2 className="titulo">Red Patriota</h2>
-                      </div>
-                      <div className="col-12">
-                        <h2 className="h1 fc-white fw-bold text-center">
-                          Una Sola voz
-                        </h2>
-                      </div>
-                      <div className="col-12">
-                        <h1 className="h1 fc-white fw-bold text-center">
-                          por nuestra Patria
-                        </h1>
-                      </div>
-                      <div className="col-12">
-                        <BotonVolver
-                          text="Entrar"
-                          onClickHandler={handleLogin}
-                        />
-                        {/* 
-                        <BotonGuardar
-                          text="Enviar"
-                          onClickHandler={handleLogin}
-                        /> */}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-3 offset-3 d-flex justify-content-end">
-                  <span>
-                    <img src={LogoChile} alt="" className="logo" />
-                  </span>
-                  <span>
-                    <img src={Libertad} alt="" className="logo" />
-                  </span>
-                  <span>
-                    <img src={BanderaEscudo} alt="" className="logo" />
-                  </span>
-                </div>
+        <div className="home">
+          <div className="layer">
+            <div className="left">
+              <span className="titulo">Red Patriota</span>
+              <span className="bajada">Una Sola voz por nuestra Patria</span>
+              <div className="botones">
+                <button
+                  className="btn btn-sm btn-primary"
+                  onClick={handleLogin}
+                >
+                  Entrar
+                </button>
+                <button
+                  className="btn btn-sm btn-primary"
+                  onClick={handlePresentacion}
+                >
+                  Presentacion
+                </button>
+                <button
+                  className="btn btn-sm btn-primary"
+                  onClick={handleExplicame}
+                >
+                  Explicame
+                </button>
+                <button
+                  className="btn btn-sm btn-primary"
+                  onClick={handlePruebaFlex}
+                >
+                  Prueba Flex
+                </button>
               </div>
+            </div>
+            <div className="right">
+              <section className="rrss">
+                {/* <ul>
+                  <li className="social-media-icon">
+                    <img src={LogoChile} alt="" />
+                  </li>
+                  <li className="social-media-icon">
+                    <img src={Libertad} alt="" />
+                  </li>
+                  <li className="social-media-icon">
+                    <img src={BanderaEscudo} alt="" />
+                  </li>
+                </ul> */}
+                <ul>
+                  <li className="social-media-icon">
+                    <a
+                      href="https://twitter.com/AtrevidosEntre"
+                      aria-label="Close"
+                    >
+                      <FaTwitter />
+                    </a>
+                  </li>
+                  <li className="social-media-icon">
+                    <a
+                      href="https://www.youtube.com/c/EntreAtrevidos"
+                      aria-label="Close"
+                    >
+                      <FaYoutube />
+                    </a>
+                  </li>
+                  <li className="social-media-icon">
+                    <a
+                      href="https://www.instagram.com/entreatrevidos/"
+                      aria-label="Close"
+                    >
+                      <FaInstagram />
+                    </a>
+                  </li>
+                  <li className="social-media-icon">
+                    <a
+                      href="https://entre-atrevidos-candidatos.blogspot.com/"
+                      aria-label="Close"
+                    >
+                      <FaBlogger />
+                    </a>
+                  </li>
+                </ul>
+              </section>
             </div>
           </div>
         </div>
-        <button className="btn btn-sm btn-primary" onClick={handlePresentacion}>
-          Presentacion
-        </button>
-        <button className="btn btn-sm btn-primary" onClick={handleExplicame}>
-          Explicame
-        </button>
-        <Temas />
       </main>
+      <Temas />
       {/* <Footer /> */}
     </>
   );

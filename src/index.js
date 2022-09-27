@@ -9,13 +9,13 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Rutas } from "./components/routes";
 
 // css
-import "../src/components/styles/Styles.css";
-import Explicame from "./views/explicame/Explicame";
+import "../src/components/styles/Styles.scss";
+// import Explicame from "./views/explicame/Explicame";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
-    {/* <Rutas /> */}
-    <Explicame />
+    <Rutas />
+    {/* <Explicame /> */}
   </BrowserRouter>
 );

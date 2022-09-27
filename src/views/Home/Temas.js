@@ -1,259 +1,227 @@
-import BotonGenerico from '../../components/html/button/BotonGenerico';
-import BotonGenerico2 from '../../components/html/button/BotonGenerico2';
+import BotonGenerico from "../../components/html/button/BotonGenerico";
+import BotonGenerico2 from "../../components/html/button/BotonGenerico2";
 
 // css
-import './style.css';
+import "./Temas.scss";
 
 const Temas = () => {
-	const handlerUno = () => {
-		alert('hola');
-	};
+  const handlerUno = () => {
+    alert("hola");
+  };
 
-	return (
-		<div className="container temas">
-			<div className="d-flex flex-row flex-wrap justify-content-center mb-3">
-				<div className="col-12 my-5">
-					<span className="texto-4xl">hhhhh</span>
-					<hr></hr>
-					<span className="texto">
-						lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
-						lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
-						lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
-						lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
-						lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
-						lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
-						lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
-					</span>
-				</div>
-			</div>
-			<div className="d-flex flex-row flex-wrap justify-content-center justify-content-evenly my-4">
-				<div className="col-10 col-sm-10 col-md-4 col-lg-4 col-xl-4">
-					<span className="texto-xl fc-steel-blue">One Call API 3.0</span>
-					<div className="my-2">
-						<BotonGenerico text="hola hola" onClickHandler={handlerUno} />
-						<BotonGenerico2 text="hola hola" onClickHandler={handlerUno} />
-					</div>
-					<div className="mt-3">
-						<span className="texto-sm">
-							lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
-							lorem lorem lorem
-						</span>
-					</div>
+  return (
+    <div className="temas">
+      <div className="cuerpo-primero">
+        <div className="recuadro">
+          <p className="titulo">hhhhh dddd sssss</p>
+          <hr></hr>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum
+            libero fugiat similique officiis voluptatibus esse aspernatur magnam
+            expedita? Excepturi sint similique eius expedita vel eaque soluta
+            voluptate iusto provident eligendi. Sunt architecto, ipsa aut
+            explicabo molestiae quo doloribus reiciendis blanditiis non
+            voluptatum laudantium ab repudiandae voluptates. Quibusdam numquam
+            mollitia voluptatum totam, nostrum accusantium iste. Quasi, tempore?
+            Expedita ex harum quam
+          </p>
+        </div>
+      </div>
 
-					<div className="my-2">
-						<ul className="pl-6 texto-sm">
-							<li>
-								<span className="texto-sm">
-									lorem lorem lorem lorem lorem lorem lorem
-								</span>
-							</li>
-							<li>
-								<span className="texto-sm">
-									lorem lorem lorem lorem lorem lorem lorem
-								</span>
-							</li>
-							<li>
-								<span className="texto-sm">
-									lorem lorem lorem lorem lorem lorem lorem
-								</span>
-							</li>
-						</ul>
-					</div>
-					<div className="my-4">
-						<span className="texto-sm">
-							lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
-							lorem lorem lorem
-						</span>
-					</div>
-				</div>
+      <div className="cuerpo-segundo">
+        <div className="recuadro">
+          <p className="titulo">One Call API 3.0</p>
+          <div>
+            <BotonGenerico text="hola hola" onClickHandler={handlerUno} />
+            <BotonGenerico2 text="hola hola" onClickHandler={handlerUno} />
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam
+            quae non pariatur nesciunt, labore dignissimos qui incidunt atque
+            odio velit cum dolorem officia adipisci repellat doloribus. Id sunt
+            dolorem deleniti!
+          </p>
 
-				<div className="col-10 col-sm-10 col-md-4 col-lg-4 col-xl-4">
-					<span className="texto-xl fc-steel-blue">One Call API 3.0</span>
-					<div className="my-2">
-						<BotonGenerico text="hola hola" onClickHandler={handlerUno} />
-						<BotonGenerico2 text="hola hola" onClickHandler={handlerUno} />
-					</div>
-					<div className="mt-3">
-						<span className="texto-sm">
-							lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
-							lorem lorem lorem
-						</span>
-					</div>
+          <ul>
+            <li>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Voluptatem vero laboriosam labore saepe nulla aliquid explicabo
+                aut eius asperiores autem. Officia sequi minus dolore.
+                Architecto hic dignissimos natus mollitia in. Officiis aliquam
+              </p>
+            </li>
+            <li>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi,
+                id possimus? Unde porro ullam adipisci iure repudiandae,
+                exercitationem quod molestias. Doloribus ipsum voluptate
+                consequuntur commodi, adipisci pariatur tempora nostrum ex.
+              </p>
+            </li>
+            <li>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Debitis eligendi suscipit consectetur ex! Perferendis placeat in
+                ad sed modi dolor porro omnis impedit incidunt! Laborum
+                provident dicta quo maiores nulla.
+              </p>
+            </li>
+          </ul>
 
-					<div className="my-2">
-						<ul className="pl-6 texto-sm">
-							<li>
-								<span className="texto-sm">
-									lorem lorem lorem lorem lorem lorem lorem
-								</span>
-							</li>
-							<li>
-								<span className="texto-sm">
-									lorem lorem lorem lorem lorem lorem lorem
-								</span>
-							</li>
-							<li>
-								<span className="texto-sm">
-									lorem lorem lorem lorem lorem lorem lorem
-								</span>
-							</li>
-						</ul>
-					</div>
-					<div className="my-4">
-						<span className="texto-sm">
-							lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
-							lorem lorem lorem
-						</span>
-					</div>
-				</div>
-			</div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam
+            quae non pariatur nesciunt, labore dignissimos qui incidunt atque
+            odio velit cum dolorem officia adipisci repellat doloribus. Id sunt
+            dolorem deleniti!
+          </p>
+        </div>
 
-			<div className="d-flex flex-row flex-wrap justify-content-center justify-content-evenly my-4">
-				<div className="col-12 my-5">
-					<span className="texto-3xl">hhhhh</span>
-					<hr></hr>
-					<span className="texto-sm">
-						lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
-						lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
-						lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
-						lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
-						lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
-						lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
-						lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
-					</span>
-				</div>
-			</div>
+        <div className="recuadro">
+          <p className="titulo">One Call API 3.0</p>
+          <div>
+            <BotonGenerico text="hola hola" onClickHandler={handlerUno} />
+            <BotonGenerico2 text="hola hola" onClickHandler={handlerUno} />
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam
+            quae non pariatur nesciunt, labore dignissimos qui incidunt atque
+            odio velit cum dolorem officia adipisci repellat doloribus. Id sunt
+            dolorem deleniti!
+          </p>
 
-			<div className="d-flex flex-row flex-wrap justify-content-center justify-content-evenly my-3">
-				<div className="col-12 my-2">
-					<span className="texto-3xl">hhhhh</span>
-					<hr></hr>
-				</div>
-			</div>
+          <ul>
+            <li>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Voluptatem vero laboriosam labore saepe nulla aliquid explicabo
+                aut eius asperiores autem. Officia sequi minus dolore.
+                Architecto hic dignissimos natus mollitia in. Officiis aliquam
+              </p>
+            </li>
+            <li>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi,
+                id possimus? Unde porro ullam adipisci iure repudiandae,
+                exercitationem quod molestias. Doloribus ipsum voluptate
+                consequuntur commodi, adipisci pariatur tempora nostrum ex.
+              </p>
+            </li>
+            <li>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Debitis eligendi suscipit consectetur ex! Perferendis placeat in
+                ad sed modi dolor porro omnis impedit incidunt! Laborum
+                provident dicta quo maiores nulla.
+              </p>
+            </li>
+          </ul>
 
-			<div className="d-flex flex-row flex-wrap justify-content-center justify-content-evenly my-2">
-				<div className="col-10 col-sm-10 col-md-4 col-lg-4 col-xl-4">
-					<span className="texto-xl fc-steel-blue">One Call API 3.0</span>
-					<div className="my-2">
-						<BotonGenerico text="hola hola" onClickHandler={handlerUno} />
-						<BotonGenerico2 text="hola hola" onClickHandler={handlerUno} />
-					</div>
-					<div className="mt-3">
-						<span className="texto-sm">
-							lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
-							lorem lorem lorem
-						</span>
-					</div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam
+            quae non pariatur nesciunt, labore dignissimos qui incidunt atque
+            odio velit cum dolorem officia adipisci repellat doloribus. Id sunt
+            dolorem deleniti!
+          </p>
+        </div>
+      </div>
 
-					<div className="my-2">
-						<ul className="pl-6 texto-sm">
-							<li>
-								<span className="texto-sm">
-									lorem lorem lorem lorem lorem lorem lorem
-								</span>
-							</li>
-							<li>
-								<span className="texto-sm">
-									lorem lorem lorem lorem lorem lorem lorem
-								</span>
-							</li>
-							<li>
-								<span className="texto-sm">
-									lorem lorem lorem lorem lorem lorem lorem
-								</span>
-							</li>
-						</ul>
-					</div>
-					<div className="my-4">
-						<span className="texto-sm">
-							lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
-							lorem lorem lorem
-						</span>
-					</div>
-				</div>
+      <div className="cuerpo-tercero">
+        <div className="recuadro">
+          <p className="titulo">One Call API 3.0</p>
+          <div>
+            <BotonGenerico text="hola hola" onClickHandler={handlerUno} />
+            <BotonGenerico2 text="hola hola" onClickHandler={handlerUno} />
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam
+            quae non pariatur nesciunt, labore dignissimos qui incidunt atque
+          </p>
 
-				<div className="col-10 col-sm-10 col-md-4 col-lg-4 col-xl-4">
-					<span className="texto-xl fc-steel-blue">One Call API 3.0</span>
-					<div className="my-2">
-						<BotonGenerico text="hola hola" onClickHandler={handlerUno} />
-						<BotonGenerico2 text="hola hola" onClickHandler={handlerUno} />
-					</div>
-					<div className="mt-3">
-						<span className="texto-sm">
-							lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
-							lorem lorem lorem
-						</span>
-					</div>
+          <ul>
+            <li>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+            </li>
+            <li>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi,
+              </p>
+            </li>
+            <li>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </li>
+          </ul>
 
-					<div className="my-2">
-						<ul className="pl-6 texto-sm">
-							<li>
-								<span className="texto-sm">
-									lorem lorem lorem lorem lorem lorem lorem
-								</span>
-							</li>
-							<li>
-								<span className="texto-sm">
-									lorem lorem lorem lorem lorem lorem lorem
-								</span>
-							</li>
-							<li>
-								<span className="texto-sm">
-									lorem lorem lorem lorem lorem lorem lorem
-								</span>
-							</li>
-						</ul>
-					</div>
-					<div className="my-4">
-						<span className="texto-sm">
-							lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
-							lorem lorem lorem
-						</span>
-					</div>
-				</div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam
+            quae non pariatur nesciunt, labore dignissimos qui incidunt atque
+          </p>
+        </div>
 
-				<div className="col-10 col-sm-10 col-md-4 col-lg-4 col-xl-4">
-					<span className="texto-xl fc-steel-blue">One Call API 3.0</span>
-					<div className="my-2">
-						<BotonGenerico text="hola hola" onClickHandler={handlerUno} />
-						<BotonGenerico2 text="hola hola" onClickHandler={handlerUno} />
-					</div>
-					<div className="mt-3">
-						<span className="texto-sm">
-							lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
-							lorem lorem lorem
-						</span>
-					</div>
+        <div className="recuadro">
+          <p className="titulo">One Call API 3.0</p>
+          <div>
+            <BotonGenerico text="hola hola" onClickHandler={handlerUno} />
+            <BotonGenerico2 text="hola hola" onClickHandler={handlerUno} />
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam
+            quae non pariatur nesciunt, labore dignissimos qui incidunt atque
+          </p>
 
-					<div className="my-2">
-						<ul className="pl-6 texto-sm">
-							<li>
-								<span className="texto-sm">
-									lorem lorem lorem lorem lorem lorem lorem
-								</span>
-							</li>
-							<li>
-								<span className="texto-sm">
-									lorem lorem lorem lorem lorem lorem lorem
-								</span>
-							</li>
-							<li>
-								<span className="texto-sm">
-									lorem lorem lorem lorem lorem lorem lorem
-								</span>
-							</li>
-						</ul>
-					</div>
-					<div className="my-4">
-						<span className="texto-sm">
-							lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
-							lorem lorem lorem
-						</span>
-					</div>
-				</div>
-			</div>
-		</div>
-	);
+          <ul>
+            <li>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+            </li>
+            <li>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi,
+              </p>
+            </li>
+            <li>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </li>
+          </ul>
+
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam
+            quae non pariatur nesciunt, labore dignissimos qui incidunt atque
+          </p>
+        </div>
+
+        <div className="recuadro">
+          <p className="titulo">One Call API 3.0</p>
+          <div>
+            <BotonGenerico text="hola hola" onClickHandler={handlerUno} />
+            <BotonGenerico2 text="hola hola" onClickHandler={handlerUno} />
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam
+            quae non pariatur nesciunt, labore dignissimos qui incidunt atque
+          </p>
+
+          <ul>
+            <li>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+            </li>
+            <li>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi,
+              </p>
+            </li>
+            <li>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </li>
+          </ul>
+
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam
+            quae non pariatur nesciunt, labore dignissimos qui incidunt atque
+          </p>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default Temas;

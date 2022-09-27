@@ -29,26 +29,23 @@ function Appp({ data }) {
   };
 
   return (
-    <div className="pagina">
-      <div className="pagina2">
-        <section
-          className="wrapper"
-          style={{ backgroundImage: `${wrapperStyle}` }}
-        >
-          <Selectors
-            data={data}
-            activeID={activeID}
-            _changeActive={_changeActive}
-          />
-          <Panel
-            data={data[activeID]}
-            panelStyle={panelStyle}
-            buttonStyle={buttonStyle}
-            _buttonColour={_buttonColour}
-          />
-        </section>
-      </div>
-    </div>
+    // <div className="pagina">
+    //   <div className="pagina2">
+    <section className="wrapper" style={{ backgroundImage: `${wrapperStyle}` }}>
+      <Selectors
+        data={data}
+        activeID={activeID}
+        _changeActive={_changeActive}
+      />
+      <Panel
+        data={data[activeID]}
+        panelStyle={panelStyle}
+        buttonStyle={buttonStyle}
+        _buttonColour={_buttonColour}
+      />
+    </section>
+    //   </div>
+    // </div>
   );
 }
 

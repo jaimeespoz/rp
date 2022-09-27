@@ -6,7 +6,7 @@ import NavBarPanelA from "./NavBarPanelA";
 import NavBarPanelB from "./NavBarPanelB";
 import NavBarPanelC from "./NavBarPanelC";
 
-import "./style.css";
+// import "./style.css";
 
 import Data from "../../presentacion/api/NavBarMain.json";
 
