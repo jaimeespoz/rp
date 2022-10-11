@@ -8,6 +8,7 @@ $grey-light: rgba(72, 72, 72, 0.8);
 $grey-medium: rgba(70, 70, 70, 0.75);
 $grey-dark: rgba(43, 43, 43, 1);
 $textColor: #eee;
+$white: rgba(255, 255, 255, 1);
 
 // the entire scrollbar
 ::-webkit-scrollbar {
@@ -94,6 +95,10 @@ $textColor: #eee;
                     color: $texto;
                     padding: 8px 0px;
                     line-height: 100%;
+
+                    // &:active {
+                    //     color: red;
+                    // }
                 }
 
                 span:hover {
@@ -201,6 +206,7 @@ $textColor: #eee;
                 padding: 2px 0px;
                 color: $texto;
                 line-height: 100%;
+                text-decoration: none;
 
                 &:hover {
                     color: $texto-muted;
@@ -226,6 +232,7 @@ $textColor: #eee;
                 padding: 2px 0px;
                 color: $texto;
                 line-height: 100%;
+                text-decoration: none;
 
                 &:hover {
                     color: $texto-muted;
@@ -242,6 +249,35 @@ $textColor: #eee;
                 padding: 6px 0px;
                 color: $texto-semi-muted;
                 line-height: 120%;
+
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: flex-start;
+                align-content: space-evenly;
+                // align-items: flex-start;.
+
+                .rrss {
+                    /* padding: 8px;*/
+                    color: rgba(255, 255, 255, 1);
+                    .social-media-icon {
+                        /* margin-right: 8px; */
+                        /* padding: 6px; */
+                        /* color: rgba(255, 255, 255, 1); */
+                        display: inline-block;
+                        width: 22px;
+                        height: 22px;
+                        font-size: 16px;
+                        background-color: $white;
+                        border: 1px solid rgba(255, 255, 255, 1);
+                        border-radius: 50%;
+                        /* text-align: center; */
+                    }
+
+                    .social-media-icon:hover {
+                        background: $steal-blue;
+                        color: $white;
+                    }
+                }
             }
 
             .link-sin-link {
@@ -260,14 +296,10 @@ $textColor: #eee;
                 // padding: 2px 0px;
                 color: $texto;
                 line-height: 100%;
+                text-decoration: none;
 
                 &:hover {
                     color: $texto-muted;
-                    cursor: pointer;
-                }
-
-                &:active {
-                    color: orangered;
                     cursor: pointer;
                 }
             }

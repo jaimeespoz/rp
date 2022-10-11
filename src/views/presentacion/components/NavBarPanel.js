@@ -1,56 +1,85 @@
 //
 import { useState, useEffect } from "react";
+
 import NavBarDetalle from "./NavBarDetalle";
 
 // url
-import { url_opciones_get_hijos } from "./Url";
+import { url_navbar_opciones } from "../../../components/routes/Urls";
 
-// import "./NavBarPanel.scss";
-
-import Data from "../../presentacion/api/NavBarMain.json";
+// import Data from "../../presentacion/api/NavBarMain.json";
 
 function NavBarPanel({ padre }) {
-  const [dba, setDba] = useState([]);
-  const [dbb, setDbb] = useState([]);
-  const [dbc, setDbc] = useState([]);
+  const [dba, setDba] = useState(null);
+  const [dbb, setDbb] = useState(null);
+  const [dbc, setDbc] = useState(null);
 
   useEffect(() => {
     leeOpciones(padre);
   }, [padre]);
 
   const leeOpciones = (padre) => {
-    // async function fetchData(padre) {
-    //   await fetch(url_opciones_get_hijos + "02/" + padre, {
-    //     method: "get",
-    //     headers: {
-    //       "Content-Type": "application/json",
-    //     },
-    //   })
-    //     .then((res) => res.json())
-    //     .then((result) => {
-    //       setDb(result.data);
-    //     })
-    //     .catch((err) => {
-    //       console.log(err);
-    //     });
-    // }
-    // fetchData(padre);
-    let xx = Data.NavBarMain.filter((item) => item.padre === padre);
-    setDba(xx);
+    async function fetchData(padre) {
+      await fetch(url_navbar_opciones + padre, {
+        method: "get",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
+        .then((res) => res.json())
+        .then((result) => {
+          // alert(JSON.stringify(result));
+          setDba(result);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    }
+    fetchData(padre);
+    // let xx = Data.NavBarMain.filter((item) => item.padre === padre);
+    // setDba(xx);
   };
 
   const MouseOverA = (Id) => {
-    // alert("MouseOverA: " + Id);
-    // setId(id);
-    let xx = Data.NavBarMain.filter((item) => item.padre === Id);
-    setDbb(xx);
+    async function fetchData(padre) {
+      await fetch(url_navbar_opciones + Id, {
+        method: "get",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
+        .then((res) => res.json())
+        .then((result) => {
+          //  alert(JSON.stringify(result));
+          setDbb(result);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    }
+    fetchData(padre);
+    // let xx = Data.NavBarMain.filter((item) => item.padre === Id);
+    // setDbb(xx);
   };
 
   const MouseOverB = (Id) => {
-    // alert("MouseOverB: " + Id);
-    // setId(id);
-    let xx = Data.NavBarMain.filter((item) => item.padre === Id);
-    setDbc(xx);
+    async function fetchData(padre) {
+      await fetch(url_navbar_opciones + Id, {
+        method: "get",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
+        .then((res) => res.json())
+        .then((result) => {
+          setDbc(result);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    }
+    fetchData(padre);
+    // let xx = Data.NavBarMain.filter((item) => item.padre === Id);
+    // setDbc(xx);
   };
 
   return (
@@ -61,9 +90,9 @@ function NavBarPanel({ padre }) {
             dba.map((item) => {
               return (
                 <li
-                  key={item.id}
+                  key={item.serial}
                   onMouseOver={() => {
-                    MouseOverA(item.id);
+                    MouseOverA(item.id_opcion);
                   }}
                 >
                   {/* Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque omnis ad ipsam explicabo ratione magnam recusandae nulla, soluta error, cum earum deleniti harum perspiciatis itaque sit. Laudantium veniam repellendus doloribus! */}
@@ -81,9 +110,9 @@ function NavBarPanel({ padre }) {
             dbb.map((item) => {
               return (
                 <li
-                  key={item.id}
+                  key={item.serial}
                   onMouseOver={() => {
-                    MouseOverA(item.id);
+                    MouseOverB(item.id_opcion);
                   }}
                 >
                   <NavBarDetalle item={item} />
@@ -100,9 +129,9 @@ function NavBarPanel({ padre }) {
             dbc.map((item) => {
               return (
                 <li
-                  key={item.id}
+                  key={item.serial}
                   onMouseOver={() => {
-                    MouseOverA(item.id);
+                    MouseOverA(item.id_opcion);
                   }}
                 >
                   <NavBarDetalle item={item} />
