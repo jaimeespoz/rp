@@ -117,21 +117,25 @@ $white: rgba(255, 255, 255, 1);
         // align-content: flex-start;
         // align-items: flex-start;
         // height: 70vh;
+        transition: all 3s;
+        transition-delay: 1s;
 
         .navbarpanel {
             flex: 1 0 auto;
 
             display: flex;
             flex-flow: row nowrap;
-            justify-content: flex-start;
+            justify-content: center;
             align-content: space-evenly;
             // align-items: flex-start;
+            transition: all 3s;
             padding: 2%;
             gap: 1rem;
 
             .item-left {
                 flex: 1 0 300px;
                 padding: 2%;
+                height: 560px;
 
                 &:hover {
                     overflow-y: scroll;
@@ -150,6 +154,7 @@ $white: rgba(255, 255, 255, 1);
             .item-center {
                 flex: 1 0 620px;
                 padding: 2%;
+                height: 560px;
 
                 &:hover {
                     overflow-y: scroll;
@@ -166,14 +171,15 @@ $white: rgba(255, 255, 255, 1);
             }
 
             .item-right {
-                flex: 1 0 300px;
+                flex: 1 0 280px;
                 padding: 2%;
+                height: 560px;
 
-                &:hover {
-                    overflow-y: scroll;
-                    overflow-x: hidden;
-                    max-height: auto;
-                }
+                // &:hover {
+                overflow-y: scroll;
+                overflow-x: hidden;
+                max-height: auto;
+                // }
 
                 ul {
                     padding: 18px;
@@ -254,31 +260,33 @@ $white: rgba(255, 255, 255, 1);
                 flex-flow: column nowrap;
                 justify-content: flex-start;
                 align-content: space-evenly;
-                // align-items: flex-start;.
-
-                .rrss {
-                    /* padding: 8px;*/
-                    color: rgba(255, 255, 255, 1);
-                    .social-media-icon {
-                        /* margin-right: 8px; */
-                        /* padding: 6px; */
-                        /* color: rgba(255, 255, 255, 1); */
-                        display: inline-block;
-                        width: 22px;
-                        height: 22px;
-                        font-size: 16px;
-                        background-color: $white;
-                        border: 1px solid rgba(255, 255, 255, 1);
-                        border-radius: 50%;
-                        /* text-align: center; */
-                    }
-
-                    .social-media-icon:hover {
-                        background: $steal-blue;
-                        color: $white;
-                    }
-                }
+                // align-items: flex-start;
             }
+
+            // .rrss2 {
+            //     padding: 8px 24px;
+            //     color: rgba(255, 255, 255, 1);
+            //     display: block;
+
+            //     // .social-media-icon {
+            //     //     margin-right: 8px;
+            //     //     // padding: 6px;
+            //     //     /* color: rgba(255, 255, 255, 1); */
+            //     //     // display: inline-block;
+            //     //     width: 22px;
+            //     //     height: 22px;
+            //     //     font-size: 16px;
+            //     //     background-color: $white;
+            //     //     border: 1px solid rgba(255, 255, 255, 1);
+            //     //     border-radius: 50%;
+            //     //     /* text-align: center; */
+            //     // }
+
+            //     // .social-media-icon:hover {
+            //     //     background: $steal-blue;
+            //     //     color: $white;
+            //     // }
+            // }
 
             .link-sin-link {
                 font: {

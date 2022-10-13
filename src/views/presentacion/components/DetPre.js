@@ -42,12 +42,12 @@ const DetPre = () => {
       <section>
         {db &&
           db.map((item) => {
-            return (
-              <article key={item.id}>
-                <p>hola</p>
-                <DetPreDetalle item={item} />
-              </article>
-            );
+            // return (
+            //   // <article key={item.id}>
+            //   //   <p>hola</p>
+            //   //   <DetPreDetalle item={item} />
+            //   // </article>
+            // );
           })}
       </section>
     </div>

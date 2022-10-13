@@ -5,8 +5,8 @@ import NavBarDetalle from "./NavBarDetalle";
 
 // url
 import { url_navbar_opciones } from "../../../components/routes/Urls";
-
-// import Data from "../../presentacion/api/NavBarMain.json";
+import DetSit from "./DetSit";
+import DetSide from "./DetSide";
 
 function NavBarPanel({ padre }) {
   const [dba, setDba] = useState(null);
@@ -17,7 +17,7 @@ function NavBarPanel({ padre }) {
     leeOpciones(padre);
   }, [padre]);
 
-  const leeOpciones = (padre) => {
+  const leeOpciones = (Id) => {
     async function fetchData(padre) {
       await fetch(url_navbar_opciones + padre, {
         method: "get",
@@ -27,21 +27,19 @@ function NavBarPanel({ padre }) {
       })
         .then((res) => res.json())
         .then((result) => {
-          // alert(JSON.stringify(result));
+          // console.log(JSON.stringify(result));
           setDba(result);
         })
         .catch((err) => {
           console.log(err);
         });
     }
-    fetchData(padre);
-    // let xx = Data.NavBarMain.filter((item) => item.padre === padre);
-    // setDba(xx);
+    fetchData(Id);
   };
 
   const MouseOverA = (Id) => {
     async function fetchData(padre) {
-      await fetch(url_navbar_opciones + Id, {
+      await fetch(url_navbar_opciones + padre, {
         method: "get",
         headers: {
           "Content-Type": "application/json",
@@ -49,21 +47,19 @@ function NavBarPanel({ padre }) {
       })
         .then((res) => res.json())
         .then((result) => {
-          //  alert(JSON.stringify(result));
+          // console.log(JSON.stringify(result));
           setDbb(result);
         })
         .catch((err) => {
           console.log(err);
         });
     }
-    fetchData(padre);
-    // let xx = Data.NavBarMain.filter((item) => item.padre === Id);
-    // setDbb(xx);
+    fetchData(Id);
   };
 
   const MouseOverB = (Id) => {
     async function fetchData(padre) {
-      await fetch(url_navbar_opciones + Id, {
+      await fetch(url_navbar_opciones + padre, {
         method: "get",
         headers: {
           "Content-Type": "application/json",
@@ -71,15 +67,14 @@ function NavBarPanel({ padre }) {
       })
         .then((res) => res.json())
         .then((result) => {
+          // console.log(JSON.stringify(result));
           setDbc(result);
         })
         .catch((err) => {
           console.log(err);
         });
     }
-    fetchData(padre);
-    // let xx = Data.NavBarMain.filter((item) => item.padre === Id);
-    // setDbc(xx);
+    fetchData(Id);
   };
 
   return (
@@ -90,7 +85,7 @@ function NavBarPanel({ padre }) {
             dba.map((item) => {
               return (
                 <li
-                  key={item.serial}
+                  key={item.react_key}
                   onMouseOver={() => {
                     MouseOverA(item.id_opcion);
                   }}
@@ -110,7 +105,7 @@ function NavBarPanel({ padre }) {
             dbb.map((item) => {
               return (
                 <li
-                  key={item.serial}
+                  key={item.react_key}
                   onMouseOver={() => {
                     MouseOverB(item.id_opcion);
                   }}
@@ -125,20 +120,15 @@ function NavBarPanel({ padre }) {
 
       <div className="item-right">
         <ul>
-          {dbc &&
-            dbc.map((item) => {
-              return (
-                <li
-                  key={item.serial}
-                  onMouseOver={() => {
-                    MouseOverA(item.id_opcion);
-                  }}
-                >
-                  <NavBarDetalle item={item} />
-                </li>
-              );
-            })}
-          {!dbc && <li></li>}
+          <li
+          // key={item.serial}
+          // onMouseOver={() => {
+          //   MouseOverA(item.id_opcion);
+          // }}
+          >
+            {/* <NavBarDetalle item={item} /> */}
+            {/* <DetSide /> */}
+          </li>
         </ul>
       </div>
     </div>

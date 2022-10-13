@@ -5,8 +5,6 @@ import NavBarPanel from "./NavBarPanel";
 
 import "./Presentacion.scss";
 
-// import Data from "../../presentacion/api/NavBarMain.json";
-
 // url
 import { url_navbar_opciones } from "../../../components/routes/Urls";
 
@@ -30,6 +28,7 @@ function Presentacion() {
       })
         .then((res) => res.json())
         .then((result) => {
+          // console.log(JSON.stringify(result));
           setDb(result);
         })
         .catch((err) => {
@@ -47,7 +46,7 @@ function Presentacion() {
             db.map((item) => {
               return (
                 <li
-                  key={item.serial}
+                  key={item.react_key}
                   onMouseOver={() => {
                     setId(item.id_opcion);
                     setPadre(item.id_opcion);

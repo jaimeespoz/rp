@@ -1,0 +1,12 @@
+@import "fontawesome.scss";
+@import "fa-solid.scss";
+@import "fa-brands.scss";
+@import "fa-regular.scss";
+
+.user {
+    @include fa-icon;
+    @extend .fab;
+    &::before {
+        content: fa-content($fa-var-android);
+    }
+}

@@ -42,12 +42,12 @@ const DetSit = () => {
       <section>
         {db &&
           db.map((item) => {
-            return (
-              <article key={item.id}>
-                <p>hola</p>
-                <DetSitDetalle item={item} />
-              </article>
-            );
+            // return (
+            //   // <article key={item.id}>
+            //   //   <p>hola</p>
+            //   //   <DetSitDetalle item={item} />
+            //   // </article>
+            // )
           })}
       </section>
     </div>

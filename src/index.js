@@ -18,6 +18,8 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
     <Rutas />
+    {/* <DetPre /> */}
+    {/* <DetSit /> */}
     {/* <Explicame />  <DetPre />*/} {/*<DetSit />*/}
   </BrowserRouter>
 );

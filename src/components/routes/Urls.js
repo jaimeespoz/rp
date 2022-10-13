@@ -33,4 +33,8 @@ export const url_navbar_opciones = url_srv + "NavBarOpciones/Opciones/"; // {pad
 
 // Stored: NavBar.Opciones_Vinculos
 export const url_navbar_opciones_vinculos =
-  url_srv + "NavBarOpcionesVinculos/OpcionesVinculos/"; // {id}
+  url_srv + "NavBarOpcionesVinculos/OpcionesVinculos/"; // {id_Opcion} / {id_Tipo_Textos}
+
+// Stored: NavBar.Opciones_Acciones
+export const url_navbar_opciones_acciones =
+  url_srv + "NavBarOpcionesAcciones/OpcionesAcciones/"; // {id_Opcion} / {id_Tipo_Textos}
