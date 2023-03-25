@@ -30,3 +30,14 @@ export const url_navbar_vinculos_delete = url_srv + "NavBarVinculos/Delete/"; //
 
 // Stored: NavBar.Opciones
 export const url_navbar_opciones = url_srv + "NavBarOpciones/Opciones/"; // {padre}
+<<<<<<< HEAD
+=======
+
+// Stored: NavBar.Opciones_Vinculos
+export const url_navbar_opciones_vinculos =
+  url_srv + "NavBarOpcionesVinculos/OpcionesVinculos/"; // {id_Opcion} / {id_Tipo_Textos}
+
+// Stored: NavBar.Opciones_Acciones
+export const url_navbar_opciones_acciones =
+  url_srv + "NavBarOpcionesAcciones/OpcionesAcciones/"; // {id_Opcion} / {id_Tipo_Textos}
+>>>>>>> 251ff4831045c956de9aee7ab2079ffd8477a4a6

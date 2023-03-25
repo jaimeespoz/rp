@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Fragment } from "react";
 import PropTypes from "prop-types";
 
@@ -11,6 +12,18 @@ export const BotonRRSS = ({ text, onClickHandler }) => {
         </a>
       </article>
     </Fragment>
+=======
+import PropTypes from "prop-types";
+import "./style.scss";
+
+export const BotonRRSS = ({ url, className, text, onClickHandler }) => {
+  return (
+    <article className="social-media-icon">
+      <a href={url} className={className} aria-label="Close">
+        <span className="spany">{text}</span>
+      </a>
+    </article>
+>>>>>>> 251ff4831045c956de9aee7ab2079ffd8477a4a6
   );
 };
 

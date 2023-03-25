@@ -1,7 +1,12 @@
+<<<<<<< HEAD
 import { Link, useNavigate, useLocation } from "react-router-dom";
 
 import BotonGenerico3 from "../../../components/html/button/BotonGenerico3";
 import BotonRRSS from "../../../components/html/button/BottonRRSS";
+=======
+import NavBarAcciones from "./NavBarAcciones";
+import NavBarVinculos from "./NavBarVinculos";
+>>>>>>> 251ff4831045c956de9aee7ab2079ffd8477a4a6
 
 function NavBarDetalle({ item }) {
   const location = useLocation();
@@ -24,6 +29,7 @@ function NavBarDetalle({ item }) {
   };
   // alert(JSON.stringify(item));
   return (
+<<<<<<< HEAD
     <div className="navbardetalle">
       <p
         className={item.textos_classname}
@@ -63,6 +69,24 @@ function NavBarDetalle({ item }) {
         </section>
       )}
     </div>
+=======
+    <>
+      <div className="navbardetalle">
+        <p
+          className={item.textos_classname}
+          style={{
+            paddingTop: `${item.textos_presalto}`,
+            paddingBottom: `${item.textos_postsalto}`,
+            paddingLeft: `${item.textos_offset}`,
+          }}
+        >
+          {item.id_opcion}-{item.textos_texto}
+        </p>
+        {item.textos_acciones && <NavBarAcciones item={item} />}
+        {item.textos_vinculos && <NavBarVinculos item={item} />}
+      </div>
+    </>
+>>>>>>> 251ff4831045c956de9aee7ab2079ffd8477a4a6
   );
 }
 

@@ -1,5 +1,4 @@
 import BotonGenerico from "../../components/html/button/BotonGenerico";
-import BotonGenerico2 from "../../components/html/button/BotonGenerico2";
 
 // css
 import "./Temas.scss";
@@ -32,8 +31,16 @@ const Temas = () => {
         <div className="recuadro">
           <p className="titulo">One Call API 3.0</p>
           <div>
-            <BotonGenerico text="hola hola" onClickHandler={handlerUno} />
-            <BotonGenerico2 text="hola hola" onClickHandler={handlerUno} />
+            <BotonGenerico
+              text="hola hola"
+              className="tipo1"
+              onClickHandler={handlerUno}
+            />
+            <BotonGenerico
+              text="hola hola"
+              className="tipo2"
+              onClickHandler={handlerUno}
+            />
           </div>
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam
@@ -80,8 +87,16 @@ const Temas = () => {
         <div className="recuadro">
           <p className="titulo">One Call API 3.0</p>
           <div>
-            <BotonGenerico text="hola hola" onClickHandler={handlerUno} />
-            <BotonGenerico2 text="hola hola" onClickHandler={handlerUno} />
+            <BotonGenerico
+              text="hola hola"
+              className="tipo1"
+              onClickHandler={handlerUno}
+            />
+            <BotonGenerico
+              text="hola hola"
+              className="tipo2"
+              onClickHandler={handlerUno}
+            />
           </div>
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam
@@ -130,8 +145,16 @@ const Temas = () => {
         <div className="recuadro">
           <p className="titulo">One Call API 3.0</p>
           <div>
-            <BotonGenerico text="hola hola" onClickHandler={handlerUno} />
-            <BotonGenerico2 text="hola hola" onClickHandler={handlerUno} />
+            <BotonGenerico
+              text="hola hola"
+              className="tipo1"
+              onClickHandler={handlerUno}
+            />
+            <BotonGenerico
+              text="hola hola"
+              className="tipo2"
+              onClickHandler={handlerUno}
+            />
           </div>
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam
@@ -161,8 +184,16 @@ const Temas = () => {
         <div className="recuadro">
           <p className="titulo">One Call API 3.0</p>
           <div>
-            <BotonGenerico text="hola hola" onClickHandler={handlerUno} />
-            <BotonGenerico2 text="hola hola" onClickHandler={handlerUno} />
+            <BotonGenerico
+              text="hola hola"
+              className="tipo1"
+              onClickHandler={handlerUno}
+            />
+            <BotonGenerico
+              text="hola hola"
+              className="tipo2"
+              onClickHandler={handlerUno}
+            />
           </div>
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam
@@ -192,8 +223,16 @@ const Temas = () => {
         <div className="recuadro">
           <p className="titulo">One Call API 3.0</p>
           <div>
-            <BotonGenerico text="hola hola" onClickHandler={handlerUno} />
-            <BotonGenerico2 text="hola hola" onClickHandler={handlerUno} />
+            <BotonGenerico
+              text="hola hola"
+              className="tipo1"
+              onClickHandler={handlerUno}
+            />
+            <BotonGenerico
+              text="hola hola"
+              className="tipo2"
+              onClickHandler={handlerUno}
+            />
           </div>
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam

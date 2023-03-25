@@ -3,29 +3,25 @@ import { Button } from "semantic-ui-react";
 import PropTypes from "prop-types";
 import "./style.scss";
 
-export const BotonGenerico = ({ text, onClickHandler }) => {
+export const BotonGenerico = ({ text, className, onClickHandler }) => {
   return (
     <Fragment>
       <Button
         fluid
         primary
         basic
-        className="boton-generico"
+        className={className}
         onClick={onClickHandler}
       >
         {text}
       </Button>
-      {/* <div className="boton-generico">
-				<div className="borde">
-					<h2>Hola</h2>
-				</div>
-			</div> */}
     </Fragment>
   );
 };
 
 BotonGenerico.propTypes = {
   text: PropTypes.string.isRequired,
+  // className: PropTypes.string.isRequired,
   onClickHandler: PropTypes.func.isRequired,
 };
 

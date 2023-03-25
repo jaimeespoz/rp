@@ -18,6 +18,11 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
     <Rutas />
+<<<<<<< HEAD
+=======
+    {/* <DetPre /> */}
+    {/* <DetSit /> */}
+>>>>>>> 251ff4831045c956de9aee7ab2079ffd8477a4a6
     {/* <Explicame />  <DetPre />*/} {/*<DetSit />*/}
   </BrowserRouter>
 );

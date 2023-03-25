@@ -5,8 +5,11 @@ import NavBarPanel from "./NavBarPanel";
 
 import "./Presentacion.scss";
 
+<<<<<<< HEAD
 // import Data from "../../presentacion/api/NavBarMain.json";
 
+=======
+>>>>>>> 251ff4831045c956de9aee7ab2079ffd8477a4a6
 // url
 import { url_navbar_opciones } from "../../../components/routes/Urls";
 
@@ -30,6 +33,10 @@ function Presentacion() {
       })
         .then((res) => res.json())
         .then((result) => {
+<<<<<<< HEAD
+=======
+          // console.log(JSON.stringify(result));
+>>>>>>> 251ff4831045c956de9aee7ab2079ffd8477a4a6
           setDb(result);
         })
         .catch((err) => {
@@ -47,10 +54,10 @@ function Presentacion() {
             db.map((item) => {
               return (
                 <li
-                  key={item.id}
+                  key={item.react_key}
                   onMouseOver={() => {
-                    setId(item.id);
-                    setPadre(item.id);
+                    setId(item.id_opcion);
+                    setPadre(item.id_opcion);
                     setPanels(item.tipo_columnas);
                   }}
                 >
