@@ -5,10 +5,10 @@ import NavBarPanel from "./NavBarPanel";
 
 import "./Presentacion.scss";
 
-import Data from "../../presentacion/api/NavBarMain.json";
+// import Data from "../../presentacion/api/NavBarMain.json";
 
 // url
-import { url_opciones_get_hijos } from "./Url";
+import { url_navbar_opciones } from "../../../components/routes/Urls";
 
 function Presentacion() {
   const [panels, setPanels] = useState(null);
@@ -20,29 +20,23 @@ function Presentacion() {
     leeNavBar(0);
   }, []);
 
-  const leeNavBar = (hijo) => {
-    // async function fetchData(hijo) {
-    //   await fetch(url_opciones_get_hijos + "02/" + hijo, {
-    //     method: "get",
-    //     headers: {
-    //       "Content-Type": "application/json",
-    //     },
-    //   })
-    //     .then((res) => res.json())
-    //     .then((result) => {
-    //       setDb(result.data);
-    //     })
-    //     .catch((err) => {
-    //       console.log(err);
-    //     });
-    // }
-    // fetchData(hijo);
-
-    let xx = Data.NavBarMain.filter((item) => item.padre === hijo);
-    setDb(xx);
-    // let yy = JSON.stringify(db[0].tipo_columnas);
-    // alert(yy);
-    // setPanels(yy);
+  const leeNavBar = (padre) => {
+    async function fetchData(padre) {
+      await fetch(url_navbar_opciones + padre, {
+        method: "get",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
+        .then((res) => res.json())
+        .then((result) => {
+          setDb(result);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    }
+    fetchData(padre);
   };
 
   return (
@@ -60,7 +54,7 @@ function Presentacion() {
                     setPanels(item.tipo_columnas);
                   }}
                 >
-                  <span>{item.descripcion}</span>
+                  <span>{item.textos_texto}</span>
                 </li>
               );
             })}
